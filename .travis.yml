@@ -2,5 +2,6 @@ before_install:
 - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
 
 script:
+- cd "IRCI1/Algèbre Linéaire/"
 - mkdir _build
-- pdflatex -output-directory _build "IRCI1/Algèbre Linéaire/Algèbre Linéaire - Nicolas Englebert.tex"
+- pdflatex -output-directory _build "Algèbre Linéaire - Nicolas Englebert.tex"
