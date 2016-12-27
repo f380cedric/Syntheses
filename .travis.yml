@@ -1,4 +1,11 @@
 language: r
+cache: packages
+warnings_are_errors: false
+
+before_install:
+  - tlmgr install standalone showexpl imakeidx xpatch
+
+install: echo Installation step #do not remove this line!
 script:
 - cd "IRCI1/Algèbre Linéaire/"
 - mkdir _build
