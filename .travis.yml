@@ -5,7 +5,7 @@ warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install babel-french cancel pgfplots circuitikz $(cat Builder/preambule.tex | grep \usepackage{.*.} | sed  's/.*\usepackage{//;s/}.*//;s/fixltx2e//' | tr '\n' ' ')
+  - tlmgr install babel-french cancel pgfplots circuitikz
 
 
 install: echo 1
