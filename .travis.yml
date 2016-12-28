@@ -11,6 +11,6 @@ before_install:
 install: echo 1
 
 script:
-- cd "IRCI1/Algèbre Linéaire/"
+- cd "IRCI4-PHYS/Mécanique quantique II/"
 - mkdir _build
-- pdflatex -interaction=nonstopmode -output-directory _build "Algèbre Linéaire - Nicolas Englebert.tex"
+- pdflatex -interaction=nonstopmode -output-directory _build "Mécanique quantique II - Nicolas Englebert.tex"
