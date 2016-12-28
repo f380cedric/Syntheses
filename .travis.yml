@@ -1,5 +1,7 @@
 language: r
 pandoc: false
+git:
+  depth: 3
 cache: packages
 warnings_are_errors: false
 
@@ -10,7 +12,4 @@ before_install:
 
 install: echo 1
 
-script:
-- cd "IRCI4-PHYS/Mécanique quantique II/"
-- mkdir _build
-- pdflatex -interaction=nonstopmode -output-directory _build "Mécanique quantique II - Nicolas Englebert.tex"
+script: ./script
