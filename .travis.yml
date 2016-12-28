@@ -5,7 +5,7 @@ warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install babel-french cancel pgfplots circuitikz titlepic fourier-orns
+  - tlmgr install babel-french cancel pgfplots circuitikz titlepic fourier
 
 
 install: echo 1
