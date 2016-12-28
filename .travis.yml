@@ -1,5 +1,8 @@
 language: r
 pandoc: false
+branches:
+ only:
+  - master
 git:
   depth: 3
 cache: packages
@@ -7,7 +10,7 @@ warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install babel-french cancel pgfplots circuitikz titlepic fourier physics
+ - tlmgr install babel-french cancel pgfplots circuitikz titlepic fourier physics
 
 
 install: git config --global core.quotepath off
