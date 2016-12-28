@@ -1,14 +1,15 @@
 language: r
+pandoc: false
 cache: packages
 warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install babel-french cancel
+  - tlmgr install babel-french cancel pgfplots
 
 install: echo 1
 
 script:
 - cd "IRCI1/Algèbre Linéaire/"
 - mkdir _build
-- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build "Algèbre Linéaire - Nicolas Englebert.tex"
+- pdflatex -interaction=nonstopmode -output-directory _build "Algèbre Linéaire - Nicolas Englebert.tex"
