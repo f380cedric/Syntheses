@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -ev
-git diff --diff-filter=rd --name-only HEAD^ | sed 's/\([^\/]*\/[^\/]*\/[^\/]*\/\).*/\1/g' | while read p; do dirname "$p"; done | awk '!a[$0]++' | while read p
+git diff --diff-filter=rd --name-only HEAD | sed 's/\([^\/]*\/[^\/]*\/[^\/]*\/\).*/\1/g' | while read p; do dirname "$p"; done | awk '!a[$0]++' | while read p
 do
 if $(echo "$p" | grep -q "Builder"); then
 continue
