@@ -4,7 +4,7 @@ warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install babel-french
+  - tlmgr install babel-french cancel
 
 install: echo 1
 
