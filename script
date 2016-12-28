@@ -1,9 +1,8 @@
 #!/bin/bash
 
 set -ev
-git diff --diff-filter=rd --name-only HEAD^^ | sed '/.pdf/d;s/.*\/build\/.*\.pdf//g;s/\([^\/]*\/[^\/]*\/[^\/]*\/\).*/\1/g' | while read p; do dirname "$p"; done | awk '!a[$0]++' | while read p
+git diff --diff-filter=rd --name-only HEAD^ | sed '/.pdf/d;s/\([^\/]*\/[^\/]*\/[^\/]*\/\).*/\1/g' | while read p; do dirname "$p"; done | awk '!a[$0]++' | while read p
 do
-echo "$p"
 if $(echo "$p" | grep -q "Builder"); then
 continue
 elif [ "$p" == "." ]; then
