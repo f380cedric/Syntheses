@@ -7,11 +7,9 @@ warnings_are_errors: false
 
 
 before_install:
-  - git config --global core.quotepath off
-  - locale
   - tlmgr install babel-french cancel pgfplots circuitikz titlepic fourier physics
 
 
-install: echo 1
+install: git config --global core.quotepath off
 
-script: echo "./script"
+script: ./script
