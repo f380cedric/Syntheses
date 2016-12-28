@@ -12,4 +12,4 @@ else
 fi
 done
 git add -A
-git diff --name-only
+echo $(git diff --name-only)
